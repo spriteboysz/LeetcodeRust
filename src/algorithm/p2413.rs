@@ -1,18 +1,19 @@
 /**
  * Author: Deean
- * Date: 2023-04-15 23:05
+ * Date: 2023-04-15 23:18
  * FileName: src/algorithm
- * Description:
+ * Description: 
  */
 #[allow(dead_code)]
 pub struct Solution {}
 
 impl Solution {
     #[allow(dead_code)]
-    pub fn distinct_integers(n: i32) -> i32 {
-        if n == 1 { 1 } else { n - 1 }
+    pub fn smallest_even_multiple(n: i32) -> i32 {
+        if n % 2 == 0 { n } else { n * 2 }
     }
 }
+
 
 #[cfg(test)]
 mod tests {
@@ -20,6 +21,6 @@ mod tests {
 
     #[test]
     fn test_self() {
-        assert_eq!(Solution::distinct_integers(5), 4);
+        assert_eq!(Solution::smallest_even_multiple(5), 10);
     }
 }
